@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lian Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+            body:has(#mode:checked) #right,
+            body:has(#mode:checked) #left,
+            body:has(#mode:checked) #dock {
+                filter: invert(1) hue-rotate(180deg);
+            }
+
+            body:has(#mode:checked) #page img {
+                filter: invert(1) hue-rotate(180deg);
+            }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="mode" class="sr-only">    
+
+    <nav id="left" clss="hidden md:block fixed left-6 bottom-28 z-10 text-xs text-gray-500">
+
+        <a href="#home" class="group flex items-center gap-3 py-1.5 hover:text-gray-900">
+            <span class="block h-px w-3 bg-gray-400 transition-all group-hover:w-7 group-hover:bg-gray-900"></span>Home
+        </a>
+
+        <a href="#about" class="group flex items-center gap-3 py-1.5 hover:text-gray-900">
+            <span class="block h-px w-3 bg-gray-400 transition-all group-hover:w-7 group-hover:bg-gray-900"></span>About me
+        </a>
+
+        <a href="#stacks" class="group flex items-center gap-3 py-1.5 hover:text-gray-900">
+            <span class="block h-px w-3 bg-gray-400 transition-all group-hover:w-7 group-hover:bg-gray-900"></span>Tech Stacks
+        </a>
+
+        <a href="#projects" class="group flex items-center gap-3 py-1.5 hover:text-gray-900">
+            <span class="block h-px w-3 bg-gray-400 transition-all group-hover:w-7 group-hover:bg-gray-900"></span>Projects
+        </a>
+
+        <a href="#experience" class="group flex items-center gap-3 py-1.5 hover:text-gray-900">
+            <span class="block h-px w-3 bg-gray-400 transition-all group-hover:w-7 group-hover:bg-gray-900"></span>Experience
+        </a>
+
+        <a href="#contact" class="group flex items-center gap-3 py-1.5 hover:text-gray-900">
+            <span class="block h-px w-3 bg-gray-400 transition-all group-hover:w-7 group-hover:bg-gray-900"></span>Contact
+        </a>
+    </nav>
+
+    <div id="dock" class="fixed right-4 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center gap-6 bg-gray-900 text-white text-sm text-center rounded-x1 p-4">
+        <a href="#home" class="font-bold">lian.div</a>
+        <a href="https://github.com/Yami-Sukehirox" class="hover:text-blue-300">GitHub</a>
+        <label for="mode" class="cursor-pointer hover:text-blue-300">MODE</label>
+        <a href="https://www.instagram.com/ange_loshsh" class="hover:text-blue-300">Instagram</a>
+        <a href="mailto:liancruspero1@gmail.com" class="hover:text-blue-300">Email</a>
+    </div>
+
+    <div id="page" class="bg-stone-100 text-gray-800 min-h-screen pr-28 md:pl-36">
+
+        <nav class="md:hidden flex gap-4 overflow-x-auto p-4 text-sm text-gray-600">
+
+            <a href="#home" class="whitespace-nowrap">Home</a>
+            <a href="#about" class="whitespace-nowrap">About me</a>
+            <a href="#stacks" class="whitespace-nowrap">Tech Stacks</a>
+            <a href="#projects" class="whitespace-nowrap">Projects</a>
+            <a href="#experience" class="whitespace-nowrap">Experience</a>
+            <a href="#contact" class="whitespace-nowrap">Contact</a>
+
+        </nav>
+
+    </div>
+
+</body>
+</html>
